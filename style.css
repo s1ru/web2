@@ -18,7 +18,7 @@ h1 {
   grid-template-columns: 150px 1fr
 }
 
-#grid ol {
+ol {
   border-right:1px gray solid;
   width:100px;
   margin:0;
