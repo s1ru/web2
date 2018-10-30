@@ -1,0 +1,85 @@
+<!doctype html>
+<HTML>
+
+<head>
+  <title>jQuery는 무엇일까?</title>
+  <meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script>
+var Links ={
+  setColor(color){
+        var alist =document.querySelectorAll('a');
+        var i=0;
+        while(i < alist.length){
+          alist[i].style.color = color;
+          i = i +1;
+          }
+      }
+}
+
+
+    var Body = {
+      setColor:function (color){
+         document.querySelector('body').style.color = color;
+       },
+      setBackgroundColor:function(color){
+          document.querySelector('body').style.backgroundColor=color;
+          }
+
+    }
+
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+      Body.setBackgroundColor('black');
+      Body.setColor('white');
+      self.value ='day';
+      Links.setColor('powderblue');
+
+      }else {
+      Body.setBackgroundColor('white');
+      Body.setColor('black');
+      self.value ='night';
+      Links.setColor('blue');
+      }
+    }
+</script>
+</head>
+
+<body>
+  <H1><a href="index.html">WEB</a></H1>
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+  <div id="grid">
+      <ol>
+        <li><a href="1.html">  html</a></li>
+        <li><a href="2.html">  jQuery</a></li>
+        <li><a href="3.html">  python</a></li>
+      </ol>
+
+    <div id="article">
+        <H2>jQuery이란 뭐냐?</H2>
+
+        <p>
+          <strong>배워봐야 알겠당</strong><br>
+          jQuery는 HTML 속 클라이언트 사이드 스크립트 언어를 단순화 하도록
+        설계된 브라우저 호환성이 있는 JavaScript 라이브러리이다.
+        존 레식에 의해 2006년 뉴욕 시 바캠프(Barcamp NYC)에서
+        공식적으로 소개되었다. 현재 가장 인기있는 JavaScript 라이브러리이며
+        표준에 가까운 점유율을 자랑한다.기능적으로야 더 좋은 라이브러리들도
+         많지만, jQuery가 순식간에 업계를 장악한
+        특장점은 바로 무지하게 쉽고 간편하다는 점이다. 'write less, do more'
+        가 모토로서 비프로그래머인 웹디자이너들도 어렵지않게 이해할 수 있을 만큼
+        쉬운 편이다. DOM구조와 CSS에 대한 지식만 있다면 애니메이션 같은 건
+          바로 이해가 가능할 정도다. 실제로 저자인 존 레식은 프로그래머들의
+          칭찬보다 순수 웹디자이너들의 감사 인사가 더 특별한 기쁨이라고 한다.
+        </p>
+
+
+        <H2><a href="http://www.naver.com"
+          target="_blank" title="검색해서 배워랏">네이버로 배우는 jQuery</a> </H2>
+    </div>
+<div>
+</body>
+</html>
